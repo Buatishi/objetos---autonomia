@@ -14,13 +14,22 @@ class Planta{
     inventario += 1
   }
   method energizar(){
+  if(energia<=9){
+    return
+  }else{
   energia -= 10 
   tamano += 3
+  return}
 }
   
   method hidratar() {
+  if(hidratacion<=9){
+    return
+  }else{
   hidratacion -= 10
   tamano += 3
+  return
+  }
 }
 }
 
