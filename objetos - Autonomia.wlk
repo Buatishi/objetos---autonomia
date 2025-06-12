@@ -31,6 +31,24 @@ class Planta{
   return
   }
 }
+
+  method lluvia(){
+    if(max_hidratacion<=100){
+      hidratacion += 10
+      return
+    }else{
+      return
+    }
+  }
+  
+  method sol(){
+    if(max_energia<=100){
+      energia += 10
+      return
+    }else{
+      return
+    }
+  }
 }
 
 object girasol inherits Planta{
@@ -50,4 +68,21 @@ object flor inherits Planta{
   }
   
   
+}
+
+class Tierra{
+  const tierra = #{"preparada","profesional","organica"}
+  const property preparada = tierra.get(0) 
+  const property profesional = tierra.get(1)
+  const property organica = tierra.get(2)
+}
+
+object preparada{
+  method crecimiento() = 5
+}
+object profesional{
+  method crecimiento() = 8
+}
+object organica{
+  method crecimiento() = 3
 }
