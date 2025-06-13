@@ -49,6 +49,16 @@ class Planta{
       return
     }
   }
+  
+  method profesional(tierra){
+    tamano = tamano + tierra.profesional() * crecimiento()
+  }
+  method preparada(tierra){
+    tamano = tamano + tierra.preparada() * crecimiento()
+  }
+  method organica(tierra){
+    tamano = tamano + tierra.organica() * crecimiento()
+  }
 }
 
 object girasol inherits Planta{
@@ -75,6 +85,7 @@ class Tierra{
   const property preparada = tierra.get(0) 
   const property profesional = tierra.get(1)
   const property organica = tierra.get(2)
+  
 }
 
 object preparada{
